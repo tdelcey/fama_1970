@@ -1,0 +1,93 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&family=Fira+Sans+Condensed:wght@400;600&display=swap');
+
+:root {
+  --bg-1: #f7f2ea;
+  --bg-2: #f1f6f4;
+  --ink: #1f1f1f;
+  --muted: #606770;
+  --accent: #2f6f61;
+  --panel: #ffffff;
+  --border: #e6e1d8;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  background: linear-gradient(120deg, var(--bg-1), var(--bg-2));
+  color: var(--ink);
+}
+
+.app-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 18px 40px;
+}
+
+.hero {
+  text-align: center;
+  margin: 10px 0 24px;
+}
+
+.hero-title {
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.panel-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+}
+
+.panel-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: var(--ink);
+}
+
+.panel-note {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.network-wrap {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+
+.right-column {
+  padding-left: 6px;
+}
+
+.table th {
+  background-color: #f3f0ea !important;
+}
+
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  .network-wrap {
+    margin-bottom: 16px;
+  }
+  .right-column {
+    padding-left: 0;
+  }
+}

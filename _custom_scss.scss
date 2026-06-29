@@ -1,0 +1,13 @@
+/*-- scss:defaults --*/
+$body-color: #131516;
+
+/*-- scss:rules --*/
+
+.highlight-last {
+  color: lighten($body-color, 15%); // slightly lighter grey for non-highlighted text
+
+  .current-fragment {
+    color: #0077b6; // richer blue accent for the highlight
+    font-weight: 800; // optional: subtle emphasis
+  }
+}

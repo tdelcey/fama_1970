@@ -1,0 +1,18 @@
+project:
+  output-dir: _output
+
+title: "The Dissemination of Fama (1970)" 
+subtitle: "A Bibliometric Analysis"
+
+authors:
+  - name: "Thomas Delcey"
+    email: "thomas.delcey@ube.fr"
+    affiliation:
+      - name: "Université de Bourgogne, LEDI"
+
+css: "_custom_css.css"
+
+execute:
+  freeze: auto
+
+bibliography: references.bib

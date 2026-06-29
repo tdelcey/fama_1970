@@ -1,0 +1,36 @@
+# Private files and folders
+_private_files/
+
+# Data files (not included — see paths_and_packages.R for configuration)
+*.rds
+*.RData
+*.parquet
+*.feather
+*.csv
+*.xlsx
+*.xls
+*.dta
+data/
+
+# Quarto output
+_output/
+_freeze/
+*.pdf
+*.html
+
+# R session artifacts
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+/.quarto/
+AGENTS.md
