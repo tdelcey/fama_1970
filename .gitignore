@@ -1,5 +1,6 @@
 # Private files and folders
 _private_files/
+.claude/
 
 # Data files (not included — see paths_and_packages.R for configuration)
 *.rds
