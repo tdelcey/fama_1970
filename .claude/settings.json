@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"c:/github_p/fama_1970\" remote -v)",
+      "Bash(git -C \"c:/github_p/fama_1970\" remote set-url origin https://github.com/tdelcey/fama_1970)"
+    ]
+  }
+}
