@@ -1,4 +1,4 @@
-source(here::here("paths_and_packages.R"))
+source(here::here("R", "paths_and_packages.R"))
 
 # load data
 

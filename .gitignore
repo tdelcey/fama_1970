@@ -13,6 +13,13 @@ _private_files/
 *.dta
 data/
 
+# Shiny app data is self-contained and must stay public
+!app/data/
+!app/data/**
+
+# Posit Connect Cloud deployment identifiers (not public)
+app/.posit/
+
 # Quarto output
 _output/
 _freeze/

@@ -1,10 +1,11 @@
 # load paths and packages
 
-source(here::here("paths_and_packages.R"))
+source(here::here("R", "paths_and_packages.R"))
 
 corpus <- readRDS(here(clean_data_path, "corpus.rds")) %>%
   ungroup %>%
   filter(year < 2011)
+
 list_journal <- xlsx::read.xlsx(
   here(clean_data_path, "list_journal.xlsx"),
   sheetIndex = 1
@@ -301,20 +302,40 @@ ggsave(
 )
 
 # -------------------------------------------------------------------
-# Optional diagnostics
+# Minor disciplines: % of total corpus for all fields except big 4
 # -------------------------------------------------------------------
-changed_fin_wins <- corpus_fin %>%
-  distinct(journal, field_base, field_fin_wins) %>%
-  filter(field_base != field_fin_wins)
 
-changed_econ_wins <- corpus_econ %>%
-  distinct(journal, field_base, field_econ_wins) %>%
-  filter(field_base != field_econ_wins)
+minor_fields <- c("Economics", "Finance", "Management", "Law")
 
-changed_mgmt_wins <- corpus_mgmt %>%
-  distinct(journal, field_base, field_mgmt_wins) %>%
-  filter(field_base != field_mgmt_wins)
+data_minor <- corpus %>%
+  group_by(year, field) %>%
+  summarise(n = n(), .groups = "drop") %>%
+  group_by(year) %>%
+  mutate(n_perc = n / sum(n)) %>%
+  ungroup() %>%
+  filter(!field %in% minor_fields)
 
-changed_fin_wins
-changed_econ_wins
-changed_mgmt_wins
+label_minor <- data_minor %>%
+  group_by(field) %>%
+  filter(year == max(year)) %>%
+  ungroup() %>%
+  mutate(label_x = year + 0.5)
+
+gg_minor <- ggplot(
+  data_minor,
+  aes(x = year, y = n_perc)
+) +
+  geom_point(color = "black", size = 1) +
+  facet_wrap(~field, ncol = 4) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.1)) +
+  labs(x = NULL, y = "Share of documents (%)") +
+  theme_light(base_size = 13) +
+  theme(legend.position = "none")
+
+ggsave(
+  here(project_path, "image", "field_minor_over_time.png"),
+  gg_minor,
+  width = 12,
+  height = 8,
+  dpi = 300
+)

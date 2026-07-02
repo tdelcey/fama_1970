@@ -1,4 +1,4 @@
-source(here::here("paths_and_packages.R"))
+source(here::here("R", "paths_and_packages.R"))
 
 corpus <- readRDS(here(clean_data_path, "corpus.rds")) %>%
   filter(year <= 2010) %>%
@@ -10,23 +10,30 @@ graph <- readRDS(here(clean_data_path, "graph_with_color.rds"))
 top_journals <- corpus %>%
   count(journal, sort = TRUE) %>%
   slice_head(n = 20) %>%
-  rename(Journal = journal, `N articles` = n)
+  mutate(journal = str_to_lower(journal)) %>%
+  rename(Journal = journal, `Number of articles` = n)
 
 # Top authors (all authors, not just first)
 top_authors <- corpus %>%
   unnest(authors) %>%
   count(authors, sort = TRUE) %>%
   slice_head(n = 20) %>%
-  rename(Author = authors, `N articles` = n)
+  mutate(authors = str_to_lower(authors)) %>%
+  rename(Authors = authors, `Number of articles` = n)
 
 # Top articles by total WoS citations
 top_articles <- corpus %>%
   arrange(desc(n)) %>%
   slice_head(n = 20) %>%
-  select(title, first_author, year, journal, n) %>%
+  mutate(
+    authors = map_chr(authors, ~str_c(str_to_lower(.x), collapse = ", ")),
+    title   = str_to_lower(title),
+    journal = str_to_lower(journal)
+  ) %>%
+  select(title, authors, year, journal, n) %>%
   rename(
     Title = title,
-    Author = first_author,
+    Authors = authors,
     Year = year,
     Journal = journal,
     `WoS citations` = n

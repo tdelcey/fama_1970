@@ -1,5 +1,5 @@
 # data
-source(here::here("paths_and_packages.R"))
+source(here::here("R", "paths_and_packages.R"))
 
 citing_fama <- readRDS(here(wos_data_path, "CITING_FAMA.rds"))
 ds_articles <- arrow::open_dataset(here(WOS_data_path, "all_art.parquet"))
