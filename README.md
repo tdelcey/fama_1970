@@ -50,53 +50,6 @@ Then launch the app from the repository root:
 shiny::runApp("app")
 ```
 
-## Reproduce the paper
-
-The paper is a Quarto document that renders to PDF via LaTeX.
-
-**The raw and processed data are not included in this repository** because they are large and/or contain licensed Web of Science data that cannot be redistributed. To replicate the analysis from scratch you need:
-- Web of Science Core Collection citation records for articles citing Fama (1970)
-- The processed `.rds` files in `clean_data/` (available on request from the author)
-
-**Prerequisites:** R, Quarto, a LaTeX distribution (TinyTeX or TeX Live), and the R packages listed in `R/paths_and_packages.R` (installed via `pacman::p_load`).
-
-**Step 1 — Configure data paths.**
-Open `R/paths_and_packages.R` and set `data_path` to the directory where the project data lives on your machine:
-
-```r
-data_path <- "C:/your/path/to/data"
-```
-
-The script then derives sub-paths automatically. The expected folder structure under `data_path` is:
-
-```
-data_path/
-└── fama_1970_project/
-    ├── clean_data/      # Pre-processed .rds files consumed by the paper
-    ├── wos/             # Raw Web of Science data
-    ├── openalex/        # Raw OpenAlex data
-    ├── intermediate_data/
-    └── figures/
-```
-
-**Step 2 — Run the R scripts** (to regenerate processed data and figures):
-
-```r
-source("R/coupling_analysis_static.R")
-source("R/coupling_analysis_dynamic.R")
-source("R/figure_fama_citations.R")
-source("R/figure_clusters_disciplines.R")
-source("R/table_corpus_descriptive.R")
-```
-
-**Step 3 — Render the paper:**
-
-```bash
-quarto render paper_V3.qmd
-```
-
-Output goes to `_output/`.
-
 ## Contact
 
 For access to the processed data, contact Thomas Delcey (thomas.delcey@ube.fr).
