@@ -42,3 +42,5 @@ Thumbs.db
 
 /.quarto/
 AGENTS.md
+
+**/*.quarto_ipynb

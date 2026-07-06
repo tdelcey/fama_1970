@@ -1,0 +1,53 @@
+```{r}
+#| eval: false
+# This chunk generates paper_changes_V2_to_V3.pdf via latexdiff
+
+root <- normalizePath("C:/cloud/research/fama_1970", winslash = "/")
+
+paper_v2 <- file.path(root, "paper_V2.qmd")
+paper_v3 <- file.path(root, "paper_V3.qmd")
+
+tex_v2 <- file.path(root, "paper_V2.tex")
+tex_v3 <- file.path(root, "paper_V3.tex")
+tex_diff <- file.path(root, "paper_changes_V2_to_V3.tex")
+pdf_diff <- file.path(root, "paper_changes_V2_to_V3.pdf")
+
+# 1) Render to LaTeX in the same folder
+system2("quarto", c("render", paper_v2, "--to", "latex", "--output", "paper_V2.tex", "--output-dir", root))
+system2("quarto", c("render", paper_v3, "--to", "latex", "--output", "paper_V3.tex", "--output-dir", root))
+
+# 2) latexdiff -> UTF-8 output
+# Write to a temp file to avoid Windows encoding issues
+
+tmp <- tempfile(fileext = ".tex")
+system2("latexdiff", c("--flatten", tex_v2, tex_v3), stdout = tmp)
+
+# Ensure UTF-8 without BOM
+lines <- readLines(tmp, encoding = "UTF-8")
+writeLines(lines, tex_diff, useBytes = TRUE)
+
+# 3) Compile with xelatex via latexmk
+system2("latexmk", c(
+  "-xelatex",
+  "-interaction=nonstopmode",
+  "-file-line-error",
+  paste0("-output-directory=", root),
+  tex_diff
+))
+
+message("Done: ", pdf_diff)
+
+# 4) Clean latexmk auxiliary files (needs tex_diff present)
+system2("latexmk", c(
+  "-c",
+  paste0("-output-directory=", root),
+  tex_diff
+))
+
+# 5) Clean up intermediate files
+to_remove <- c(tex_v2, tex_v3, tex_diff, tmp)
+to_remove <- to_remove[file.exists(to_remove)]
+if (length(to_remove) > 0) {
+  file.remove(to_remove)
+}
+```

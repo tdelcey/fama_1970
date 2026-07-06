@@ -5,7 +5,9 @@ Replication package for the paper **"The Dissemination of Fama (1970): A Bibliom
 The paper studies how Fama's 1970 *Journal of Finance* review article on the efficient market hypothesis disseminated across different communities of research — financial economics, law, management, accounting — from 1970 to 2010. The method combines quantitative bibliographic coupling network analysis (backbone extraction via the stochastic degree sequence model, Leiden clustering) with qualitative reading of documents in each cluster.
 
 An online version of the interactive app is available at:
-https://019c241f-91f4-a63b-1097-ed53083ffbbc.share.connect.posit.cloud
+https://019f12e5-9feb-cbef-4462-676ff2bbde4f.share.connect.posit.cloud
+
+The app itself is also included in this repository (see `app/` below) and can be run locally by anyone who downloads or clones the repository — no online access is required.
 
 ## Repository structure
 

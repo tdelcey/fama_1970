@@ -27,7 +27,7 @@ editor_options:
 #| echo: false
 #| warning: false
 
-source(here::here("fama_1970", "paths_and_packages.R"))
+source(here::here("R", "paths_and_packages.R"))
 
 corpus <- readRDS(here(clean_data_path, "corpus.rds")) %>% filter(year <= 2010)
 graph <- readRDS(here(clean_data_path, "graph_with_color.rds"))
