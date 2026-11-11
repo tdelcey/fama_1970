@@ -88,7 +88,11 @@ source(here::here("R", "_functions.R"))
 project_path <- here::here()
 
 
-data_path <- "C:/cloud/data"
+data_path <- if (.Platform$OS.type == "windows") {
+  "C:/cloud/data"
+} else {
+  path.expand("~/cloud/data")
+}
 
 # WOS FULL DATA
 # WOS_data_path <- "C:/Users/thomd/Documents/MEGA/data/WoS/"
