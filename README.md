@@ -1,5 +1,7 @@
 # The Dissemination of Fama (1970): A Bibliometric Analysis
 
+[![DOI](https://zenodo.org/badge/1283873660.svg)](https://doi.org/10.5281/zenodo.24137904)
+
 Replication package for the paper **"The Dissemination of Fama (1970): A Bibliometric Analysis"**. 
 
 The paper studies how Fama's 1970 *Journal of Finance* review article on the efficient market hypothesis disseminated across different communities of research — financial economics, law, management, accounting — from 1970 to 2010. The method combines quantitative bibliographic coupling network analysis (backbone extraction via the stochastic degree sequence model, Leiden clustering) with qualitative reading of documents in each cluster.
@@ -58,6 +60,10 @@ shiny::runApp("app")
 ## License
 
 The code (`R/`, the Shiny app code in `app/` and the Quarto sources) is released under the MIT License (see `LICENSE`). The derived data (`app/data/`, `data/`) and the figures (`image/`) are released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+## Citation
+
+Please cite the replication package as: Delcey, Thomas. *The Dissemination of Fama (1970): A Bibliometric Analysis — Replication package*. Zenodo. https://doi.org/10.5281/zenodo.24137904
 
 ## Contact
 
