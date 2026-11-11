@@ -414,7 +414,7 @@ tribble_label <- tribble(
   "cl_111"                , "ED / insurance"                   , "#fdd0a2"   ,
 
   # 1988
-  "cl_148"                , "ED / social responsability"       , "#fdae6b"   ,
+  "cl_148"                , "ED / social responsibility"       , "#fdae6b"   ,
   "cl_161"                , "FE / technical analysis"          , "#9e9ac8"   ,
   "cl_170"                , "FE / fund performance"            , "#bcbddc"   ,
   "cl_210"                , "EM / housing"                     , "#a1d99b"   ,
