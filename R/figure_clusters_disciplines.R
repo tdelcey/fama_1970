@@ -109,6 +109,13 @@ data_summary <- graphs %>%
       "Others",
       field
     )
+  ) %>%
+  # aggregate minor fields into a single "Others" bar per cluster
+  group_by(cluster_label, field) %>%
+  summarise(
+    count = sum(count),
+    percentage = sum(percentage),
+    .groups = "drop"
   )
 
 p_label <- paste0(
