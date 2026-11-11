@@ -10,7 +10,6 @@ authors:
     affiliation:
       - name: "Université de Bourgogne, LEDI"
 
-css: "_custom_css.css"
 
 execute:
   freeze: auto
