@@ -2,6 +2,7 @@ project:
   output-dir: _output
   render:
     - paper_V3.qmd
+    - image_descriptions.qmd
 
 title: "The Dissemination of Fama (1970)" 
 subtitle: "A Bibliometric Analysis"

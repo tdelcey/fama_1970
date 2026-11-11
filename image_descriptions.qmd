@@ -2,7 +2,7 @@
 title: "Image descriptions"
 subtitle: "The Dissemination of Fama (1970): A Bibliometric Analysis"
 format:
-  docx: default
+  pdf: default
 ---
 
 All figures need an alt-text and a long description. Alt-texts are limited to 250 characters and end with "See long description."
