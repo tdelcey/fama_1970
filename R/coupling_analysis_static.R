@@ -32,12 +32,13 @@ graph <- build_dynamic_networks_bb(
 )
 
 
-#' `saveRDS(graph, here(clean_data_path, "graph.rds"))`
+saveRDS(graph, here(clean_data_path, "graph.rds"))
 
 #### layout ####
 
 graph <- readRDS(here(clean_data_path, "graph.rds"))
 
+set.seed(123)
 graph_with_layout <- vite::complete_forceatlas2(
   graph,
   kgrav = 1,
@@ -223,7 +224,7 @@ ggsave(
   ),
   device = "jpg",
   plot = gg_label,
-  path = here(figures_path),
+  path = here("image"),
   width = 8 * 1.5,
   height = 4.5 * 1.5,
   dpi = 300

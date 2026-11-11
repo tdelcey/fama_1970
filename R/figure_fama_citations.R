@@ -76,7 +76,7 @@ gg <- data_plot %>%
 
 # Save the plot
 ggsave(
-  here("fama_1970", "image", "reviews_citations_all.jpg"),
+  here("image", "reviews_citations_all.jpg"),
   gg,
   width = 8,
   height = 4.5,

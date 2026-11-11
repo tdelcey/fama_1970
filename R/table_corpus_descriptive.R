@@ -16,9 +16,9 @@ top_journals <- corpus %>%
 # Top authors (all authors, not just first)
 top_authors <- corpus %>%
   unnest(authors) %>%
+  mutate(authors = str_to_lower(str_squish(authors))) %>%
   count(authors, sort = TRUE) %>%
   slice_head(n = 20) %>%
-  mutate(authors = str_to_lower(authors)) %>%
   rename(Authors = authors, `Number of articles` = n)
 
 # Top articles by total WoS citations

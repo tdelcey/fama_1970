@@ -106,6 +106,7 @@ for (i in 1:length(dynamic_graph)) {
   message(paste0("Running Force Atlas for the ", time_window, " window."))
 
   if (i == 1) {
+    set.seed(123)
     graphs_with_layout[[time_window]] <-
       vite::complete_forceatlas2(
         dynamic_graph[[i]],
@@ -124,6 +125,7 @@ for (i in 1:length(dynamic_graph)) {
       activate(nodes) %>%
       left_join(past_position, by = "source_id")
 
+    set.seed(123)
     graphs_with_layout[[time_window]] <-
       vite::complete_forceatlas2(
         tbl,
@@ -455,6 +457,12 @@ selected_graphs <- networkflow::color_networks(
   color = df_color
 )
 
+# save the four selected graphs (read by paper_V3.qmd)
+saveRDS(
+  selected_graphs,
+  here(clean_data_path, paste0("selected_graphs_", size_time_window, ".rds"))
+)
+
 for (i in 1:length(selected_graphs)) {
   graph <- selected_graphs[[i]]
   window <- names(selected_graphs)[[i]]
@@ -614,7 +622,7 @@ for (i in 1:length(selected_graphs)) {
     paste0("gg_graph_fa22_", time_window, ".jpg"),
     device = "jpg",
     plot = gg,
-    path = here(figures_path),
+    path = here("image"),
     width = width,
     height = height,
     dpi = 300

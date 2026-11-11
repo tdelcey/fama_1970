@@ -5,8 +5,8 @@ modules_fama_network_ui <- function(id, mode = c("static", "dynamic")) {
   mode <- match.arg(mode)
 
   fluidRow(
-    column(6, mod_fama_network_view_ui(ns("view"), mode = mode)),
-    column(6, class = "right-column", mod_fama_cluster_panels_ui(ns("panels")))
+    column(7, mod_fama_network_view_ui(ns("view"), mode = mode)),
+    column(5, class = "right-column", mod_fama_cluster_panels_ui(ns("panels")))
   )
 }
 

@@ -18,7 +18,7 @@ body {
 }
 
 .app-shell {
-  max-width: 1280px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 18px 18px 40px;
 }
@@ -90,4 +90,10 @@ body {
   .right-column {
     padding-left: 0;
   }
+}
+
+/* Networks are 16:9 SVGs rescaled to the column width: let the output
+   container take the SVG height instead of a fixed 640px box. */
+.app-shell .girafe.html-widget {
+  height: auto !important;
 }

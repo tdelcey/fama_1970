@@ -6,10 +6,7 @@ corpus <- readRDS(here(clean_data_path, "corpus.rds")) %>%
   ungroup %>%
   filter(year < 2011)
 
-list_journal <- xlsx::read.xlsx(
-  here(clean_data_path, "list_journal.xlsx"),
-  sheetIndex = 1
-)
+list_journal <- readxl::read_excel(here("data", "list_journal.xlsx"))
 
 graphs <- readRDS(here(clean_data_path, "graph_with_color.rds"))
 
@@ -90,7 +87,7 @@ chi_data <- graphs %>%
   filter(str_detect(field, "Economics|Finance|Law|Management"))
 
 chi_tbl <- table(chi_data$cluster_label, chi_data$field)
-# chisq_test <- chisq.test(chi_tbl, simulate.p.value = TRUE, B = 5000)
+set.seed(123)
 chisq_test <- chisq.test(chi_tbl, simulate.p.value = TRUE, B = 5000)
 
 # prepare data for plotting

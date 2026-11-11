@@ -18,6 +18,8 @@ build_dynamic_networks_bb <- function(
   compute_size = FALSE,
   keep_singleton = FALSE,
   filter_components = FALSE,
+  min_share = NULL,
+  nb_components = NULL,
   ...,
   verbose = TRUE
 ) {
@@ -434,7 +436,12 @@ build_dynamic_networks_bb <- function(
       }
     }
 
-    tbl_coup_list <- filter_components_dynamic(tbl_coup_list, ...)
+    tbl_coup_list <- filter_components_dynamic(
+      tbl_coup_list,
+      nb_components = nb_components,
+      min_share = min_share,
+      ...
+    )
   }
   return(tbl_coup_list)
 }

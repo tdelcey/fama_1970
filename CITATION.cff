@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite it as below."
+title: "The Dissemination of Fama (1970): A Bibliometric Analysis"
+type: software
+authors:
+  - family-names: Delcey
+    given-names: Thomas
+    affiliation: "Université de Bourgogne Europe"
+repository-code: "https://github.com/tdelcey/fama_1970"
+license: MIT

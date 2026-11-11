@@ -10,7 +10,6 @@ library(DT)
 library(shinyWidgets)
 library(ggiraph)
 library(here)
-library(ggwordcloud)
 library(shinycssloaders)
 
 # ---- Modules ----

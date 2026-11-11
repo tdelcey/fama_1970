@@ -1,85 +1,27 @@
 pacman::p_load(
-  # General Data Manipulation and Visualization
+  # Data manipulation and visualization
   "tidyverse",
-  "dplyr",
-  "janitor",
-  "ggsci",
-  "ggplot2",
-  "ggrepel",
-  "scales",
-  "patchwork",
-  "reshape",
-  "reshape2",
   "data.table",
-  "broom",
-  "stringr",
-  "xtable",
+  "scales",
+  "readxl",
   "kableExtra",
+  "ggrepel",
+  "ggforce",
+  "ggiraph",
 
-  # Text Processing and Analysis
+  # Text processing
   "tidytext",
-  "textcat",
-  "textdata",
-  "text2vec",
-  "tm",
-  "quanteda",
-  "spacyr",
-  "pdftools",
-  "tesseract",
 
-  # Network Analysis
-  "networkflow",
+  # Network analysis
   "tidygraph",
   "ggraph",
-  "graphlayouts",
-  "backbone",
-  "vite",
+  "backbone",      # version 2.x (2.1.5): backbone 3.x rejects data.frame edgelists
+  "biblionetwork",
+  "networkflow",   # GitHub only: see README
+  "vite",          # GitHub only: see README
 
-  # Web Scraping and APIs
-  "rscopus",
-  "here",
-  "xml2",
-  "XML",
-  "rvest",
-  "httr",
-  "jsonlite",
-  "RSelenium",
-  "openalexR",
-
-  # Visualization Enhancements
-  "ggnewscale",
-  "ggiraph",
-  "gganimate",
-  "plotly",
-  "scico",
-  "transformr",
-  "ragg",
-  "ggraph",
-  "ggforce",
-  "ggforce",
-
-  # Shiny and Interactive Dashboards
-  "shiny",
-  "shinyWidgets",
-  "shinylive",
-  "flexdashboard",
-  "rsconnect",
-  "DT",
-  "httpuv",
-
-  # Machine learning
-
-  "stm",
-  "tidystm",
-  "tidymodels",
-  "textrecipes",
-  "themis",
-  "topicmodels",
-  "ldatuning",
-  "modelsummary",
-
-  # Miscellaneous
-  "future"
+  # Paths
+  "here"
 )
 
 

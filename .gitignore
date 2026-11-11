@@ -11,7 +11,7 @@ _private_files/
 *.xlsx
 *.xls
 *.dta
-data/
+data/*
 
 # Shiny app data is self-contained and must stay public
 !app/data/
@@ -44,3 +44,6 @@ Thumbs.db
 AGENTS.md
 
 **/*.quarto_ipynb
+
+# Journal classification used by the paper (public)
+!data/list_journal.xlsx

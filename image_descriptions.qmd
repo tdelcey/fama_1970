@@ -15,7 +15,7 @@ All figures need an alt-text and a long description. Alt-texts are limited to 25
 
 **Long description:**
 
-The horizontal axis shows years from 1970 to 2015. The vertical axis shows the number of citations; the highest point is 108. Each article is a series of points with its own color and shape: blue circles for Fama 1970, red triangles for Fama 1991, light yellow squares for Fama 1998.
+The horizontal axis shows years from 1970 to 2015. The vertical axis shows the number of citations; the highest point is 108. Each article is a series of points with its own color and shape: blue circles for Fama 1970, dark red triangles for Fama 1991, light yellow squares for Fama 1998.
 
 - Fama 1970: 1 citation in 1970, 20 in 1973 and 47 in 1978. From 1979 to 1997 the counts fluctuate between 29 and 49. They drop to 19 in 1998, then rise with fluctuations: 33 in 2000, 52 in 2005, 63 in 2008, 84 in 2009 and 108 in 2010.
 - Fama 1991: first point in 1992 at 11. The counts rise to 36 in 1995, then stay between 18 and 35 from 1996 to 2008, and reach 40 in 2009 and 45 in 2010.
@@ -35,7 +35,7 @@ The horizontal axis shows years from 1970 to 2015. The vertical axis shows the s
 - Management, gold: 42.3% in 1971, falling to 28.9% in 1980 and to a low of 23.0% in 1997 and 1998. It then rises to 36.2% in 2010, the highest share in that year.
 - Economics, blue: 20.8% in 1971, rising to a peak of 42.7% in 1985, then declining slowly to 32.3% in 2010. It is the highest curve from 1977 to 2008.
 - Law, green: starts in 1981 at 1.2%, rises to a peak of 16.1% in 1994, and declines to 4.4% in 2010.
-- Others, grey: 4.4% in 1972, between 2.9% and 3.8% until 1988, then rising slowly to 10.3% in 2010. Law falls below others in 2004.
+- Others, grey: 4.4% in 1972, between 2.9% and 3.8% until 1988, then rising slowly to 10.3% in 2010. Law falls below 'others' in 2004.
 
 ## Figure 3: Static coupling network, 1970 to 2010
 
@@ -52,7 +52,7 @@ Nodes are colored dots and edges are curved lines in the color of their cluster.
 - Exploring disciplines, at the bottom right, contains four clusters: accounting, dark orange, at the junction with the financial economics region; law, light orange, in the lower center; strategy, dark brown, at the bottom right, in a looser and elongated shape; marketing, pale orange, at the far right.
 - A few grey unlabeled nodes sit at the bottom left and at the far bottom right.
 
-## Figure 4: Disciplines across clusters
+## Figure A.1: Disciplines across clusters
 
 **File:** `image/field_communities.jpg`
 
@@ -74,7 +74,7 @@ Each panel shows five bars in the same order: economics, blue; finance, red; law
 - Money: 3.70, 2.06, 0, 1.73, 0.
 - Strategy: 1.89, 0.16, 0.16, 6.67, 0.82.
 
-## Figure 5: Dynamic coupling network, 1971 to 1985
+## Figure A.2: Dynamic coupling network, 1971 to 1985
 
 **File:** `image/gg_graph_fa22_1971-1985.jpg`
 
@@ -88,7 +88,7 @@ Nodes are colored dots and edges are curved lines. Each cluster label names its 
 - Financial economics, in the center, in shades of blue and purple: theory on efficiency in the upper center; structure and early asset pricing in the center, interwoven with accounting; options below them; corporate, a small separate group at the bottom center.
 - Exploring markets: commodities, yellow, on the right; money, dark green, at the lower right; betting, light green, a small group at the top center.
 
-## Figure 6: Dynamic coupling network, 1979 to 1993
+## Figure A.3: Dynamic coupling network, 1979 to 1993
 
 **File:** `image/gg_graph_fa22_1979-1993.jpg`
 
@@ -103,7 +103,7 @@ Nodes are colored dots and edges are curved lines. Each cluster label names its 
 - Exploring markets, on the right and at the bottom: commodities, yellow, at the top right; foreign, dark green, on the right; housing, light green, mixed with the financial economics clusters; money, dark green, at the lower right, extending downward; betting, light green, a small group at the bottom center linked to the rest by a few long lines.
 - A few grey unlabeled nodes sit at the lower right.
 
-## Figure 7: Dynamic coupling network, 1988 to 2002
+## Figure A.4: Dynamic coupling network, 1988 to 2002
 
 **File:** `image/gg_graph_fa22_1988-2002.jpg`
 
@@ -118,7 +118,7 @@ Nodes are colored dots and edges are curved lines. Each cluster label names its 
 - At the upper left, three small exploring disciplines clusters: strategy, dark brown, a tight group; social responsibility, light orange, at the far left; marketing, pale orange, at the top left. They are linked to each other and to the core by long chains of a few nodes. Another chain runs from social responsibility down to law.
 - Betting, an exploring markets cluster in light green, is a small group at the bottom center, linked to the core by a single long line.
 
-## Figure 8: Dynamic coupling network, 1996 to 2010
+## Figure A.5: Dynamic coupling network, 1996 to 2010
 
 **File:** `image/gg_graph_fa22_1996-2010.jpg`
 
@@ -133,7 +133,7 @@ Nodes are colored dots and edges are curved lines. Each cluster label names its 
 - At the bottom: law, an exploring disciplines cluster in orange, a small group in the lower center; betting, an exploring markets cluster in green, just below law and extending to the bottom edge.
 - A few grey unlabeled nodes sit at the far right.
 
-## Figure 9: Robustness of the discipline classification
+## Figure A.6: Robustness of the discipline classification
 
 **File:** `image/field_over_time_robustness_4rules.png`
 
@@ -148,13 +148,13 @@ Each panel shows years from 1970 to 2010 on the horizontal axis and the share of
 - Finance always wins: finance starts higher, at 60.4% in 1970, and ends at 20.2%. Management starts at 37.3%. The other curves are close to the baseline.
 - Management always wins: management starts at 49.6% in 1971 and ends at 38.9%, the highest in 2010. Economics starts lower, at 13.7%, and peaks at 40.0% in 1985. Law peaks slightly lower, at 14.0% in 1994.
 
-In all four panels, finance starts with the highest share and declines, economics rises to a peak between 1983 and 1985, law appears in the early 1980s and peaks in 1994, and others grows slowly.
+In all four panels, finance starts with the highest share and declines, economics rises to a peak between 1983 and 1985, law appears in the early 1980s and peaks in 1994, and 'others' grows slowly.
 
-## Figure 10: Minor disciplines
+## Figure A.7: Minor disciplines
 
 **File:** `image/field_minor_over_time.png`
 
-**Alt-text:** Twelve scatter plots, one per minor discipline, of the yearly share of corpus documents from 1970 to 2010. Points are sparse and mostly between 1% and 5%. The highest are 8.00% in health and 8.70% in information science. See long description.
+**Alt-text:** Twelve scatter plots, one per minor discipline, of the yearly share of corpus documents from 1970 to 2010. Points are sparse and mostly between 1% and 5%. The highest points are 8.70% in information science and 8.00% in health. See long description.
 
 **Long description:**
 
