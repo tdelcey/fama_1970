@@ -295,7 +295,8 @@ gg_all <- ggplot(
     show.legend = FALSE
   ) +
   xlim(1970, 2015.5) +
-  labs(x = NULL, y = "Proportion of documents (%)") +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  labs(x = NULL, y = "Share of documents (%)") +
   facet_wrap(~rule, ncol = 1) +
   theme_light(base_size = 16) +
   theme(legend.position = "none")
